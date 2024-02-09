@@ -1,5 +1,5 @@
 # KavsirSegmentation
-## This is an implementation of U-Net model for Kavsir-SEG dataset for Polyp Segmentation in internal digestion system photos.  
+**This is an implementation of U-Net model for Kavsir-SEG dataset for Polyp Segmentation in internal digestion system photos.**
 
 <p align="center">
   <img src="https://github.com/TheRNB/KavsirSegmentation/blob/main/exampleSegment.png" width="512">
@@ -21,7 +21,7 @@ The requirements are as follows:
 This model is trained on the Kavsir-SEG dataset freely available for educaitonl use on [here](https://datasets.simula.no/kvasir-seg/).
 
 ## Model Design
-This model uses the U-Net architecture introduced on [this wonderful paper](https://arxiv.org/abs/1505.04597). My implementation consists of 3 different sized models:
+This model uses the U-Net architecture introduced on [this wonderful paper](https://arxiv.org/abs/1505.04597) by Ronneberger. My implementation consists of 3 different sized models to test the effect of size on accuracy and overall accuracy:
 * The first implementation of the UNet model is an encoder-decoder with these layers:
   + Encoder:
     - 2 × ((3, 3), 16) Convulotion layer + (2, 2) Maxpooling layer
@@ -66,7 +66,7 @@ This model uses the U-Net architecture introduced on [this wonderful paper](http
     - ((3,3), 32) Convolution Transpose layer + 2 × ((3, 3), 32) Convulotion + (2, 2) Maxpooling layer
     - ((3,3), 16) Convolution Transpose layer + 2 × ((3, 3), 16) Convulotion + (2, 2) Maxpooling layer
 
-# Result
+# Results
   Using these models we can achieve these accuracies on test data:
   |  | Model 1 | Model 2 | Model 3 |
   | --- | --- | --- | --- |
@@ -76,6 +76,9 @@ This model uses the U-Net architecture introduced on [this wonderful paper](http
   |  | Model 1 | Model 2 | Model 3 |
   | --- | --- | --- | --- |
   | **DICE** | **72.56** | **71.31** | **76.60** |
-  
+
+# Conclusion
+As seen by accuracy values, it seems that size has an indistinguishable difference on the accuracy, as all numbers are in margin of error of each other. However, as clearly seen by the DICE metric, The bigger models help with finding the location of the polyp more accurately.
+
 # Contact
 If there are any problems or questions about the model, feel free to reach out at aaron@bateni.org.
