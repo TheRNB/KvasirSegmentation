@@ -21,7 +21,7 @@ The requirements are as follows:
 This model is trained on the Kavsir-SEG dataset freely available for educaitonl use on [here](https://datasets.simula.no/kvasir-seg/).
 
 ## Model Design
-This model uses the U-Net architecture introduced on [this wonderful paper](https://arxiv.org/abs/1505.04597) by Ronneberger. My implementation consists of 3 different sized models to test the effect of size on accuracy and overall accuracy:
+This model uses the U-Net architecture introduced on [this wonderful paper](https://arxiv.org/abs/1505.04597) by Ronneberger. My implementation consists of 3 different sized models to test the effect of size on segmentation accuracy and overall accuracy:
 * The first implementation of the UNet model is an encoder-decoder with these layers:
   + Encoder:
     - 2 × ((3, 3), 16) Convulotion layer + (2, 2) Maxpooling layer
