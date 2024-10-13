@@ -1,8 +1,8 @@
-# KavsirSegmentation
-**This is an implementation of U-Net model for Kavsir-SEG dataset for Polyp Segmentation in internal digestion system photos.**
+# KvasirSegmentation
+**This is an implementation of U-Net model for Kvasir-SEG dataset for Polyp Segmentation in internal digestion system photos.**
 
 <p align="center">
-  <img src="https://github.com/TheRNB/KavsirSegmentation/blob/main/exampleSegment.png" width="512">
+  <img src="https://github.com/TheRNB/KvasirSegmentation/blob/main/exampleSegment.png" width="512">
 </p>
 
 # Execution
@@ -18,7 +18,7 @@ The requirements are as follows:
 
 # Description
 ## Dataset
-This model is trained on the Kavsir-SEG dataset freely available for educaitonl use on [here](https://datasets.simula.no/kvasir-seg/).
+This model is trained on the Kvasir-SEG dataset freely available for educaitonl use on [here](https://datasets.simula.no/kvasir-seg/).
 
 ## Model Design
 This model uses the U-Net architecture introduced on [this wonderful paper](https://arxiv.org/abs/1505.04597) by Ronneberger. My implementation consists of 3 different sized models to test the effect of size on segmentation accuracy and overall accuracy:
